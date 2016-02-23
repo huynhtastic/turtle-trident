@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Bootstrap 3</title>
+		<meta name="vietport" content="width=device-width, initial-scale=1.0">
+
+		<link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="./assets/css/custom_base.css" rel="stylesheet">
+
+		<style>
+		.navbar {
+			margin-bottom: 0px;
+		}
+		.container-fluid {
+			font-family: "Segoe UI Light";
+			background: url('./assets/img/claymore.gif');
+			height: 100vh;
+			max-height: 100vh;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			overflow: hidden;
+			font-family: "Segoe UI Light";
+		}
+		.container-center {
+			min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+			min-height: 100vh; /* These two lines are counted as one :-)       */
+
+			display: flex; /* Helps vertically center */
+			align-items: center; /* Helps vertically center */
+			justify-content: center; /* Centers text horizontally */
+			font-size: 25px;
+			font-size: 20vmin;
+		}/*
+		.col-lg-8 {
+			height: 100%;
+			display: flex;
+			align-items: flex-end;
+		}*/
+		.row {
+			margin-bottom: 0px;
+		}
+		.typed-cursor{
+	    opacity: 1;
+	    -webkit-animation: blink 0.7s infinite;
+	    -moz-animation: blink 0.7s infinite;
+	    animation: blink 0.7s infinite;
+		}
+		@keyframes blink{
+		    0% { opacity:1; }
+		    50% { opacity:0; }
+		    100% { opacity:1; }
+		}
+		@-webkit-keyframes blink{
+		    0% { opacity:1; }
+		    50% { opacity:0; }
+		    100% { opacity:1; }
+		}
+		@-moz-keyframes blink{
+		    0% { opacity:1; }
+		    50% { opacity:0; }
+		    100% { opacity:1; }
+		}
+		</style>
+	</head>
+
+	<body>
+
+	<div class="container-fluid text-center container-center">
+		<div class="row">
+			<div class="col-lg-12">
+				<span id="element" class="text-center"> </span>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="./assets/js/bootstrap.js"></script>
+	<script src="./assets/js/typed.js"></script>
+
+	<script>
+	$(document).ready(function() {
+		$("#element").typed({
+			strings: ["Welcome", "to some_thing"],
+			typeSpeed: 110,
+			startDelay: 2000,
+			backDelay: 500
+		});
+	});
+	</script>
+
+	</body>
+</html>
